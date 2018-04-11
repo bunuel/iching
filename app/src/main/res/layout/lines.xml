@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/line1_1"
+        android:layout_width="50dp"
+        android:layout_height="8dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/line2_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coin1" />
+
+    <TextView
+        android:id="@+id/line2_1"
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/line3_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1_1" />
+
+    <TextView
+        android:id="@+id/line3_1"
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/line4_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2_1" />
+
+    <TextView
+        android:id="@+id/line4_1"
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/line5_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line3_1" />
+
+    <TextView
+        android:id="@+id/line5_1"
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/line6_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line4_1" />
+
+    <TextView
+        android:id="@+id/line6_1"
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line5_1" />
+
+</android.support.constraint.ConstraintLayout>

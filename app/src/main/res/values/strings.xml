@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">I Ching</string>
+    <string name="welcome_text">\'THROW COINS\' six times</string>
+    <string name="throw_coins">THROW COINS</string>
+    <string name="dash">-</string>
+    <string name="start_new">start new</string>
+</resources>

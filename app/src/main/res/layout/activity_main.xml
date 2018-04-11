@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="173dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="39dp"
+        android:text="@string/throw_coins"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/textView9"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="14dp"
+        android:text="@string/start_new"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/welcome_text"
+        app:layout_constraintBottom_toTopOf="@+id/coin1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:textColor="@android:color/black"
+        tools:textSize="14sp" />
+
+
+    <!-- coins here -->
+
+    <ImageView
+        android:id="@+id/coin1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/coin2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintBottom_toTopOf="@id/line1_1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:background="@drawable/circle"
+        android:foreground="@drawable/square"
+        android:foregroundGravity="center" />
+    <ImageView
+        android:id="@+id/coin2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toTopOf="@+id/coin1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/coin1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:background="@drawable/circle"
+        android:foreground="@drawable/square"
+        android:foregroundGravity="center" />
+    <ImageView
+        android:id="@+id/coin3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toTopOf="@+id/coin1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/coin2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:background="@drawable/circle"
+        android:foreground="@drawable/square"
+        android:foregroundGravity="center" />
+
+    <!-- Lines -->
+
+    <TextView
+        android:id="@+id/line1_1"
+        android:layout_width="50dp"
+        android:layout_height="8dp"
+        android:background="@color/colorPrimary"
+        android:layout_margin="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/line2_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coin1"
+
+         />
+
+    <TextView
+        android:id="@+id/line2_1"
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:background="@color/colorPrimary"
+        android:layout_margin="1dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/line3_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1_1" />
+
+    <TextView
+        android:id="@+id/line3_1"
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:background="@color/colorPrimary"
+        android:layout_margin="1dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/line4_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2_1" />
+
+    <TextView
+        android:id="@+id/line4_1"
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:background="@color/colorPrimary"
+        android:layout_margin="1dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/line5_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line3_1" />
+
+    <TextView
+        android:id="@+id/line5_1"
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:background="@color/colorPrimary"
+        android:layout_margin="1dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/line6_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line4_1" />
+
+    <TextView
+        android:id="@+id/line6_1"
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_margin="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line5_1"
+
+        app:layout_constraintVertical_chainStyle="packed" />
+
+</android.support.constraint.ConstraintLayout>
