@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">I Ching</string>
     <string name="welcome_text">THROW COINS six times\n\n\nThe Hexagram is built from the bottom up, so the first line is the bottom one and the sixth is the top\n\n
-        In the text, six refers to a broken line and nine to a firm line\n\nA blank coin is "tails"\n\n\nContent taken from:\n
+        In the text, six refers to a broken line and nine to a firm line\n\nA light blue coin is "tails", dark blue is "heads"\n\n\nContent taken from:\n
 I CHING. THE BOOK OF CHANGES\n
 Emperor Fu Hsi\n
 translated by James Legge</string>
