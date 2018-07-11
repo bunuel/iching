@@ -164,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
         if (throwNumber == 1) {
             line1.setVisibility(View.VISIBLE);
             line1.setImageDrawable(thisImage);
+            //resultTextView.append("   yessss   ");
             //line1.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         } else if (throwNumber == 2){
             line2.setVisibility(View.VISIBLE);
