@@ -6,8 +6,8 @@ android {
         applicationId "com.lenhunt.iching"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 3
-        versionName "1.11"
+        versionCode 4
+        versionName "1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

@@ -26,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
     public ImageView line5;
     public ImageView line6;
 
-    //public String newline = System.lineSeparator();
-
     public Button throwCoinsButton;
 
     public boolean[] hexagramResultArray = new boolean[6];
@@ -46,16 +44,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // globally
-        // public TextView resultTextView = (TextView)findViewById(R.id.final_result);
-        //public TextView resultTextView = (TextView)findViewById(R.id.final_result);
-        //final TextView resultTextView = (TextView) findViewById(R.id.final_result);
+
         resultTextView = (TextView) findViewById(R.id.final_result);
         coin1 = findViewById(R.id.coin1);
         coin2 = findViewById(R.id.coin2);
         coin3 = findViewById(R.id.coin3);
 
-        // reverse the line numbers here because hexagram is built from the bottom
         line1 = findViewById(R.id.line6_1);
         line2 = findViewById(R.id.line5_1);
         line3 = findViewById(R.id.line4_1);
@@ -95,33 +89,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void throwCoins(View view) {
-        // generate 3 random binary numbers, heads or tails
         boolean[] coinResultArray = new boolean[3];
 
         for (int i = 0; i < coinResultArray.length; i++) {
             coinResultArray[i] = toBoolean(rand.nextInt(2));
-            //resultTextView.append(Integer.toString(rand.nextInt(2)));
-            //resultTextView.append(Boolean.toString(coinResultArray[i]));
-            // change the 3 coin graphics to reflect the generated numbers
             getBackgroundColor(coinResultArray[i], i);
 
 
         }
 
-        //resultTextView.append(Integer.toString(totalThrowResult));
-
-        // increment throwNumber
         throwNumber++;
 
-        // draw the line that reflects the numbers, based on the global throwNumber
         drawLine(throwNumber, thisThrowResult);
 
         thisThrowResult = 0;
 
-        // if there have been six throws, show the corresponding text for the generated lines
-
         if (throwNumber == 6) {
-            //setResultText(totalThrowResult);
             totalThrowResult = 0;
             throwNumber = 0;
             throwCoinsButton.setVisibility(View.INVISIBLE);
@@ -133,59 +116,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void drawLine(int throwNumber, int thisThrowResult) {
-        /*
-        3 heads = 6 = a broken line ( ) which changes to a firm line ( ).
 
-        3 tails = 9 = a firm line ( ) which changes to a broken line ( ).
-
-        2 heads and 1 tail = 7 a firm line ( ) that does not change.
-
-        2 tails and 1 head = 8 a broken line ( ) that does not change.
-        */
-        // true for firm line, false for broken
         int line = 1;
 
         Drawable thisImage = getResources().getDrawable(R.drawable.blank);
 
-        //resultTextView.append(Integer.toString(thisThrowResult));
-
         if (thisThrowResult == 9 || thisThrowResult == 8) {
             line = 0; // broken line
             thisImage = getResources().getDrawable(R.drawable.square);
-            //resultTextView.append("broken line");
         }
-
-        //hexagramResultArray[throwNumber - 1] = line;
 
         hexagramResultString += Integer.toString(line);
 
-        //set the background color of the line based on throw #
-        // TODO: put these all into an array and loop through them
         if (throwNumber == 1) {
             line1.setVisibility(View.VISIBLE);
             line1.setImageDrawable(thisImage);
-            //resultTextView.append("   yessss   ");
-            //line1.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         } else if (throwNumber == 2){
             line2.setVisibility(View.VISIBLE);
             line2.setImageDrawable(thisImage);
-            //line2.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         } else if (throwNumber == 3){
             line3.setVisibility(View.VISIBLE);
             line3.setImageDrawable(thisImage);
-            //line3.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         } else if (throwNumber == 4){
             line4.setVisibility(View.VISIBLE);
             line4.setImageDrawable(thisImage);
-            //line4.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         } else if (throwNumber == 5){
             line5.setVisibility(View.VISIBLE);
             line5.setImageDrawable(thisImage);
-            //line5.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         } else if (throwNumber == 6){
             line6.setVisibility(View.VISIBLE);
             line6.setImageDrawable(thisImage);
-            //line6.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         }
 
     }
@@ -210,15 +170,11 @@ public class MainActivity extends AppCompatActivity {
 
         thisThrowResult += throwResult;
 
-        // TODO: loop through these
         if (i == 0) {
-            //coin1.setBackgroundColor(background_color);
             coin1.setImageDrawable(thisImage);
         } else if (i == 1) {
-            //coin2.setBackgroundColor(background_color);
             coin2.setImageDrawable(thisImage);
         } else if (i == 2) {
-            //coin3.setBackgroundColor(background_color);
             coin3.setImageDrawable(thisImage);
         }
 
@@ -357,8 +313,6 @@ public class MainActivity extends AppCompatActivity {
             finalResultText = getResources().getString(R.string.hex_62);
         } else if (hexagramResultString.equals("101010")) {
             finalResultText = getResources().getString(R.string.hex_63);
-
-
         } else if (hexagramResultString.equals("010101")) {
             finalResultText = getResources().getString(R.string.hex_64);
         }
